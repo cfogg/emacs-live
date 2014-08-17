@@ -6,10 +6,10 @@
 (setq uniquify-ignore-buffers-re "^\\*")
 
 ;;store history of recently opened files
-(require 'recentf)
-(setq recentf-save-file (concat live-tmp-dir "recentf")
-      recentf-max-saved-items 200)
-(recentf-mode t)
+;; (require 'recentf)
+;; (setq recentf-save-file (concat live-tmp-dir "recentf")
+;;       recentf-max-saved-items 200)
+;; (recentf-mode t)
 
 ;;When you visit a file, point goes to the last place where it was
 ;;when you previously visited. Save file is set to live-tmp-dir/places
@@ -76,7 +76,7 @@
       (let ((whitespace-style '(trailing empty)) )
         (whitespace-cleanup))))
 
-(add-hook 'before-save-hook 'live-cleanup-whitespace)
+;(add-hook 'before-save-hook 'live-cleanup-whitespace)
 
 ;; savehist keeps track of some history
 (setq savehist-additional-variables

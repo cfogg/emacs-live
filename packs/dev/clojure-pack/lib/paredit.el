@@ -281,15 +281,15 @@ Paredit behaves badly if parentheses are imbalanced, so exercise
 (progn (setq paredit-commands
  `(
    "Basic Insertion Commands"
-   ("("         paredit-open-round
-                ("(a b |c d)"
-                 "(a b (|) c d)")
-                ("(foo \"bar |baz\" quux)"
-                 "(foo \"bar (|baz\" quux)"))
-   (")"         paredit-close-round
-                ("(a b |c   )" "(a b c)|")
-                ("; Hello,| world!"
-                 "; Hello,)| world!"))
+   ;; ("("         paredit-open-round
+   ;;              ("(a b |c d)"
+   ;;               "(a b (|) c d)")
+   ;;              ("(foo \"bar |baz\" quux)"
+   ;;               "(foo \"bar (|baz\" quux)"))
+   ;; (")"         paredit-close-round
+   ;;              ("(a b |c   )" "(a b c)|")
+   ;;              ("; Hello,| world!"
+   ;;               "; Hello,)| world!"))
    ("M-)"       paredit-close-round-and-newline
                 ("(defun f (x|  ))"
                  "(defun f (x)\n  |)")
@@ -428,13 +428,15 @@ Paredit behaves badly if parentheses are imbalanced, so exercise
                  "|body"))
 
    "Barfage & Slurpage"
-   (("C-)" "C-<right>")
+   ;; (("C-)" "C-<right>")
+   (("C-)")
                 paredit-forward-slurp-sexp
                 ("(foo (bar |baz) quux zot)"
                  "(foo (bar |baz quux) zot)")
                 ("(a b ((c| d)) e f)"
                  "(a b ((c| d) e) f)"))
-   (("C-}" "C-<left>")
+   ;; (("C-}" "C-<left>")
+   (("C-}")
                 paredit-forward-barf-sexp
                 ("(foo (bar |baz quux) zot)"
                  "(foo (bar |baz) quux zot)"))

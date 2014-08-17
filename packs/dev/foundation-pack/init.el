@@ -27,7 +27,7 @@
 (live-load-config-file "ibuffer-git-conf.el")
 (live-load-config-file "key-chord-conf.el")
 (live-load-config-file "window-number-conf.el")
-(live-load-config-file "recentf-conf.el")
+;(live-load-config-file "recentf-conf.el")
 (live-load-config-file "elisp-slime-nav-conf.el")
 (live-load-config-file "popwin-conf.el")
 (live-load-config-file "shell-conf.el")
